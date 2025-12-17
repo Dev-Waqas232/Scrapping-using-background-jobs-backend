@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BullModule } from '@nestjs/bullmq';
-import { VideosModule } from './videos/videos.module';
 
 @Module({
   imports: [
@@ -14,7 +13,6 @@ import { VideosModule } from './videos/videos.module';
         removeOnFail: 1000,
       },
     }),
-    VideosModule,
   ],
   controllers: [AppController],
   providers: [AppService],
